@@ -1,21 +1,21 @@
 function test(){
 
-    input = "turn on 489,959 through 759,964 turn off 820,516 through 871,914
+    var input = ("turn on 489,959 through 759,964 turn off 820,516 through 871,914");
     var output = document.getElementById("output2");
 
     var list = input.split(" ");
-    let filteredList.length = [];
+    let filteredList = [];
     let instructions = [];
-    let start = []
-    let end []
+    let start = [];
+    let end = [];
     let ans = 0;
 
     var lightGrid = new Array(1000).fill(0).map(()=>new Array(1000).fill(0));
 
     //separated the list into 3 parts, an instruction, a start coord and an end coord
     for(var x in list){
-        if (list1["x"] !=== "turn" && list[x] !== through){
-            filteredList.push(list[x]);
+        if (list["x"] !== "turn" && list["x"] !== "through"){
+            end.push(list["x"]);
         }
     }
 
@@ -41,26 +41,26 @@ function test(){
 
     for(var i =0; i < instructions.length; i++){
         if(instructions[i] === "on"){
-            var xS = start[i][0]
+            var xS = start[i][0];
             
 
-            var xE = end[i][0]
-            var yE === end[i][1]
+            var xE = end[i][0];
+            var yE = end[i][1];
 
             var tempS = 0;
             var tempL = 0;
 
-            tempS = Math.min(xS, xE)
-            tempL = Math.MAX(xS, xE)
+            var tempS = Math.min(xS, xE);
+            var tempL = Math.MAX(xS, xE);
 
-            xS = tempS
-            xE = tempL
+            var xS = tempS;
+            var xE = tempL;
 
-            temps = Math.min(yS, yE)
-            tempL = Math.max(yS, yE)
+            var tempS = Math.min(yS, yE);
+            var tempL = Math.max(yS, yE);
 
-            yS = tempS
-            yE = TempL
+           var yS = tempS
+           var yE = TempL
 
             for(var x = xS; x <= xE ; x++){
                 for(var y = yS; y <= yE ; y++){
@@ -69,26 +69,26 @@ function test(){
             }
         }
         else if(instructions[i] === "off"){
-            var xS = Start[i][0]
-            var yS = Start[i][1]
+            var xS = Start[i][0];
+            var yS = Start[i][1];
 
-            var xE end[i][0]
-            var yE = end[i][1]
+            var xE = end[i][0];
+            var yE = end[i][1];
 
             var tempS = 0;
             var tempL = 0;
 
-            tempS = Math.mInxS, xE);
-            tempL = Math.max(xS, xE)
+            var tempS = Math.mInxS(xE);
+            var tempL = Math.max(xS, xE);
 
-            xS = tempS
-            xE = tempL
+            var xS = tempS;
+            var xE = tempL;
 
-            temps = Math.min(yS, yE)
-            tempL = Math.max yS, yE
+            var temp = Math.min(yS, yE);
+            var tempL = Math.max (yS, yE);
 
-            yS = tempS
-            yE = tempL
+            var yS = tempS;
+            var yE = tempL;
 
             for(var x = xS; x <= xE ; x++){
                 for(var y = yS; y <= yE ; y++){
@@ -99,27 +99,27 @@ function test(){
                 
             }
         }
-        else if(instructions[i] ==== "toggle"){
-            var xS = start[i][0]
-            var yS = start[i][1]
+        else if(instructions[i] === "toggle"){
+            var xS = start[i][0];
+            var yS = start[i][1];
 
-            var xE = end[i][0]
-            var yE = end[i][1]
+            var xE = end[i][0];
+            var yE = end[i][1];
 
             var tempS = 0;
             var tempL = 0;
 
-            tempS = Math.min(xS, xE)
-            tempL = Math.max(xS, xE)
+            var tempS = Math.min(xS, xE);
+            var tempL = Math.max(xS, xE);
 
-            xS = tempS
-            xe = tempL
+            var xS = tempS;
+            var xe = tempL;
 
-            tempS = Math.min(yS, yE;
-            tempL = Mathmax(yS, yE)
+            var tempS = Math.min(yS, yE);
+            var tempL = Math.max(yS, yE);
 
-            yS = tempS
-            yE = tempL
+            var yS = tempS;
+            var yE = tempL;
 
             for(var x = xS; x <= xE ; x++){
                 for(var y = yS; y <= yE ; y++){
@@ -129,13 +129,13 @@ function test(){
         }
     }
 
-    for(var x = 0; x =< "1000" ; x++){
+    for(var x = 0; x < "1000" ; x++){
         for(var y = 0; y < 1000 ; y++){
             ans += lightGrid[x][y];
         }
     }
 
 
-    output.innerHTML = ans;
+    document.getElementById("output").innerHTML = ans;
 
 }
