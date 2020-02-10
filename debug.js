@@ -51,7 +51,7 @@ function test(){
             var tempL = 0;
 
             var tempS = Math.min(xS, xE);
-            var tempL = Math.MAX(xS, xE);
+            var tempL = Math.max(xS, xE);
 
             var xS = tempS;
             var xE = tempL;
@@ -113,7 +113,7 @@ function test(){
             var tempL = Math.max(xS, xE);
 
             var xS = tempS;
-            var xe = tempL;
+            var xE = tempL;
 
             var tempS = Math.min(yS, yE);
             var tempL = Math.max(yS, yE);
